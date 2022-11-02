@@ -1,0 +1,446 @@
+$primary: #5265E1;
+$secondary: #FA5959;
+$info: #242946;
+
+$h2-font-size: 3.25rem;
+$h3-font-size: 3rem;
+
+
+body {
+    overflow-x: hidden;
+
+    & p {
+        font-size: 1.25rem;
+        color: grey;
+        line-height: 1.5;
+        }
+
+    & a.nav-link {
+        font-weight: 500;
+        color: $info;
+        &:hover {
+            color: $secondary;
+            } 
+    }
+}
+
+
+ button.btn {
+    border: 3px solid transparent;
+    font-weight: 500;
+
+    &.btn-primary {
+        padding: 0.5rem 1.5rem;
+
+        &:hover {
+            border: 3px solid $primary;
+            background-color: #ffffff;
+            color: $primary;
+            box-shadow: 0px 7px 15px -7px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &.btn-secondary {
+        padding: 0.4rem 2rem;
+        color: #ffffff;
+        box-shadow: 0px 7px 15px -7px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+            border: 3px solid $secondary;
+            background-color: #ffffff;
+            color: $secondary;
+        }
+    }
+
+    &.btn-light {
+        padding: 0.5rem 1.5rem;
+
+        &:hover {
+            border: 3px solid $info;
+            background-color: #ffffff;
+            color: $info;
+            box-shadow: 0px 7px 15px -px rgba(0, 0, 0, 0.25)#000000;
+        }
+    }
+
+    &.btn-warning {
+        background-color: $secondary;
+        padding: 0.5rem 0rem;
+        color: white;
+
+        &:hover {
+            border: 3px solid $secondary;
+            background-color: #ffffff;
+            color: $secondary;
+        }
+    }
+} 
+
+.py-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.px-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+/*NAVBAR*/
+.navbar-nav li {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+/*HERO*/
+.hero {
+    position: relative;
+    & img {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.hero-bg {
+    position: absolute;
+    bottom: 0;
+    right: -40%;
+    width: 100%;
+    height: 80%;
+    background-color: $primary;
+    z-index: -1;
+    border-radius: 0 0 0 5rem;
+}
+
+
+/*BUTTONS*/
+.btn {
+    padding: 6rem;
+}
+
+
+/*NAVBAR*/
+nav.navbar {
+    --bs-navbar-toggler-font-size: 1rem;
+}
+
+.navbar-light {
+    & .navbar-toggler {
+            border-color: transparent;
+
+            &:focus {
+                    box-shadow: 0 0 0 transparent;
+                }
+        }       
+
+    & .navbar-toggler-icon {
+        background-image: url("/img/icon-hamburger.svg");}
+}
+
+
+/*TABS*/
+.nav {
+    border-bottom: 0;
+}
+
+/*image*/
+.tab-img {
+    position: relative;
+
+    & img {
+        max-width: 90%;
+        max-height: 80%;
+        margin: 5% auto 0 auto;
+        display: block;
+    }
+}
+
+.tab-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 80%;
+    background-color: $primary;
+    z-index: -1;
+    border-radius: 0 0 5rem 0;
+}
+
+nav .nav.nav-tabs button {
+   border-top: 1px solid lightgray;
+   border-bottom: 1px solid lightgray;
+   border-right: none;
+   border-left: none;
+   border-radius: 0%;
+   padding: 1rem;
+   font-weight: 500;
+
+    &:hover,
+    &:focus {
+        border-right: none;
+        border-left: none;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+
+    &.nav-link {
+        & span {
+                padding: 0.9rem;
+                border-bottom: 2px solid transparent;
+                font-size: 1.25rem;
+                color: grey;
+
+                &:hover {
+                    color: $secondary;
+                }
+            }
+
+        &.active {
+            padding-bottom: 1rem;
+            border-right: none;
+            border-left: none;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            z-index: 1;
+
+            & span {
+                padding: 0.9rem;
+                border-bottom: 5px solid $secondary;
+                z-index: 10;
+                color: $info;
+            }
+        }
+    }
+}
+
+
+/*CARDS*/
+.card {
+    box-shadow: 0px 7px 12px -3px rgba(0, 0, 0, 0.25);
+    padding: 0;
+
+    & img {
+            width: 70%;
+            height: 75%;
+            padding: 3rem;
+        }
+}
+
+
+div.card {
+    margin-bottom: 3rem;
+        
+    /*dotted line style*/
+    .dotted {
+            border-top: 4px dotted lightgrey;
+            border-image: url("/img/bg-dots.svg") 4 round;
+        }
+}
+
+
+
+/*ACCORDION*/
+div.accordion-body {
+    text-align: left;
+}
+
+button.accordion-button {
+    font-weight: 500;
+    color: $info;
+
+    &:hover {
+        color: $secondary;
+    }
+
+    &.collapsed::after {
+            background-image: url("/img/icon-arrow.svg");
+        }
+    
+        &:focus {
+            box-shadow: none;
+        }
+
+    &:not(.collapsed) {
+        background-color: #ffffff;
+        box-shadow: inset 0 transparent;
+        color: $info;
+
+        &::after {
+            background-image: url("/img/icon-arrow.svg");
+filter: invert(46%) sepia(48%) saturate(5279%) hue-rotate(335deg) brightness(118%) contrast(96%);        }
+    }               
+}
+
+
+/*FORM*/
+form.was-validated .form-control:invalid {
+    border-color: $secondary;
+    border-width: 3px;
+    border-radius: 0.375rem 0.375rem 0 0;
+    background-image: url("/img/icon-error.svg");
+}
+
+div.invalid-feedback {
+    padding: 0.2rem 0.75rem 0.5rem 0.75rem;
+    justify-content: start;
+
+    & span {
+            font-size: 0.75rem;
+            font-style: italic;
+            text-align: left;
+            padding: 0;
+        }
+}
+
+
+/*FOOTER*/
+footer {
+
+    & p {
+        color: white;
+        letter-spacing: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+
+        &:hover {
+            color: $secondary;
+            cursor: pointer;
+        }
+    }
+
+    & h4 {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    & img.bot-logo {
+        width: 60%;
+        margin-bottom: 1rem;
+    }
+
+    & .bot-icons img {
+        width: 12%;
+        margin-top: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            filter: invert(46%) sepia(55%) saturate(6000%) hue-rotate(335deg) brightness(118%) contrast(96%);        }
+    }
+}
+
+
+/*LG*/
+@media (min-width: 768px) {
+    div.text-variable-tab div {
+        padding-right: 10rem !important;
+        padding-left: 5rem;
+    }
+
+/*TAB image*/
+    .tab-img {
+        & img {
+            max-width: 105%;
+            max-height: 80%;
+            margin: 5% auto 0 auto;
+            display: block;
+        }
+    }
+
+}
+
+
+/*XL*/
+@media (min-width: 1200px) {
+    div.text-variable div {
+        text-align: left;
+        padding-left: 20%;
+        padding-right: 10%;
+    } 
+
+    div.text-variable-tab div {
+        text-align: left;
+        padding-right: 15rem;
+        padding-left: 5rem;
+    }
+
+    /*HERO*/
+    .hero {
+        & img {
+            padding-right: 6rem;
+            overflow-x: visible;
+        }
+    }
+
+    .hero-bg {
+        position: absolute;
+        bottom: 0;
+        right: -100%;
+        width: 150%;
+        height: 80%;
+        background-color: $primary;
+        z-index: -1;
+        border-radius: 0 0 0 5rem;
+    }
+
+
+    /*TABS*/
+    nav .nav.nav-tabs button {
+        border-top: 1px solid transparent;
+
+        &:hover,
+        &:focus {
+            border-top: 1px solid transparent;
+            border-top: 1px solid transparent;
+        }
+    }
+
+    nav .nav.nav-tabs button.nav-link.active {
+        border-top: 1px solid transparent;
+    }
+
+    .tab-img {    
+        & img {
+            max-height: 100%;
+            min-height: 80%;
+            margin: 8% auto;
+            padding-left: 30%;
+        }
+    }
+
+
+    /*CARDS*/
+    div.card {
+        margin-bottom: 0;
+        
+        &:nth-child(1) {
+            margin-bottom: 6rem;
+        }
+        
+        &:nth-child(2) {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        &:nth-child(3) {
+            margin-top: 6rem;
+        }
+    }
+
+        footer {
+    
+            & img.bot-logo {
+                width: 70%;
+                margin-bottom: 0;
+            }
+    
+            & .bot-icons img {
+                width: 34%;
+                margin-top: 1rem;
+            }
+        }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
